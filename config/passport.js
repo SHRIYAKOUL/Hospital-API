@@ -11,7 +11,7 @@ var JwtStrategy = require('passport-jwt').Strategy,
     ExtractJwt = require('passport-jwt').ExtractJwt;
 
 var opts = {};
-opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsServerToken();
+opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = `secret`;
 
 // Set up JWT Strategy with Passport.js
