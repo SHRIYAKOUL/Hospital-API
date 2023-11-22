@@ -9,9 +9,9 @@
 const mongoose =require('mongoose');
 // mongoose.connect("mongodb://127.0.0.1:27017");
 require('dotenv').config();
-console.log(process.env.Mongo_URI);
-const uri = process.env.Mongo_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// console.log(process.env.Mongo_URI);
+
+mongoose.connect(process.env.Mongo_URI);
 
 
 const db =mongoose.connection;
